@@ -58,14 +58,11 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log(payload);
       try {
         // POST real para o JSONPlaceholder
-        const response = await fetch(
-          "https://jsonplaceholder.typicode.com/posts",
-          {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(payload),
-          }
-        );
+        const response = await fetch("https://formspree.io/f/movwqbwq", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
 
         if (!response.ok) {
           throw new Error(`Status ${response.status}`);

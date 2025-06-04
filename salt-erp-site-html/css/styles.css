@@ -374,3 +374,110 @@ footer a:hover {
         font-size: 24px;
     }
 }
+
+/* Features Section Styles */
+#funcionalidades-completas {
+  padding-top: 3rem; /* py-5 equivalent */
+  padding-bottom: 3rem;
+  background-color: #ffffff; /* bg-white */
+}
+
+#funcionalidades-completas .section-title {
+  font-size: 2.25rem; /* text-4xl */
+  font-weight: 700; /* font-bold */
+  color: #004494; /* text-gray-900 */
+  margin-bottom: 1rem; /* mb-4 */
+}
+
+#funcionalidades-completas .section-subtitle {
+  font-size: 1.25rem; /* text-xl */
+  color: #4B5563; /* text-gray-600 */
+  max-width: 56rem; /* max-w-3xl */
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3rem; /* mb-5 from parent div, adjusted */
+}
+
+.feature-card {
+  padding: 1.5rem; /* p-6 */
+  border-radius: 0.5rem; /* rounded-lg */
+  border: 1px solid #e5e7eb; /* border border-gray-200 */
+  transition: all 0.3s ease-in-out; /* transition-all duration-300 */
+  height: 100%; /* Ensure cards in a row have same height */
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.feature-card:hover {
+  border-color: #93c5fd; /* hover:border-blue-300 */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* hover:shadow-lg */
+}
+
+/* Highlighted card style */
+.feature-card-highlighted {
+   border: 2px solid #60A5FA; /* Adjusted border for highlight */
+   box-shadow: 0 10px 15px -3px rgba(96, 165, 250, 0.2), 0 4px 6px -2px rgba(96, 165, 250, 0.1); /* Adjusted shadow for highlight */
+}
+
+
+.feature-icon-wrapper {
+  width: 3rem; /* w-12 */
+  height: 3rem; /* h-12 */
+  border-radius: 0.5rem; /* rounded-lg */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem; /* mb-4 */
+  transition: background-color 0.3s ease-in-out; /* transition-colors duration-300 */
+}
+
+.icon-bg-light {
+   background-color: #EFF6FF; /* bg-blue-50 - Lighter blue */
+}
+
+.icon-bg-primary {
+   background-color: #3B82F6; /* bg-blue-600 - Matching hover state */
+}
+
+.icon-primary {
+  color: #3B82F6; /* text-blue-600 */
+  transition: color 0.3s ease-in-out; /* transition-colors duration-300 */
+}
+
+.feature-card:hover .icon-bg-light {
+  background-color: #3B82F6; /* group-hover:bg-blue-600 */
+}
+.feature-card:hover .icon-bg-primary {
+  background-color: #2563EB; /* Darker blue on hover for primary */
+}
+
+
+.feature-card:hover .icon-primary {
+  color: #ffffff; /* group-hover:text-white */
+}
+
+/* Specific style for highlighted card icon */
+.feature-card-highlighted .icon-primary {
+    color: #ffffff; /* White icon for highlighted card */
+}
+
+
+.feature-title {
+  font-size: 1.15rem; /* Adjusted size */
+  font-weight: 600; /* font-semibold */
+  color: #111827; /* text-gray-900 */
+  margin-bottom: 0.5rem; /* mb-2 */
+}
+
+.feature-description {
+  color: #4B5563; /* text-gray-600 */
+  font-size: 0.9rem; /* Adjusted size */
+  line-height: 1.5;
+  flex-grow: 1; /* Ensure description takes remaining space */
+}
+
+/* Adjust icon size */
+.feature-icon-wrapper .fa-lg {
+    font-size: 1.3em; /* Adjusted size */
+}
