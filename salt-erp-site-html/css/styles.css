@@ -1,8 +1,9 @@
 /* Estilos personalizados para o site Salt ERP */
 
 :root {
-    --primary: #0056b3;
-    --primary-dark: #004494;
+		--bs-primary-rgb:#0086bc;
+    --primary: #0086bc;
+    --primary-dark: #005570;
     --secondary: #6c757d;
     --accent: #ff6b00;
     --light: #f8f9fa;
@@ -190,12 +191,15 @@ h1, h2, h3, h4, h5, h6 {
     top: 50%;
     transform: translateY(-50%);
     opacity: 1;
+    color: #000;
+    background-color: var(--primary);
+		border-radius: 50%;    
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     padding: 10px;
 }
 
@@ -385,7 +389,7 @@ footer a:hover {
 #funcionalidades-completas .section-title {
   font-size: 2.25rem; /* text-4xl */
   font-weight: 700; /* font-bold */
-  color: #004494; /* text-gray-900 */
+  color: var(--primary-dark); /* text-gray-900 */
   margin-bottom: 1rem; /* mb-4 */
 }
 
@@ -430,6 +434,7 @@ footer a:hover {
   justify-content: center;
   margin-bottom: 1rem; /* mb-4 */
   transition: background-color 0.3s ease-in-out; /* transition-colors duration-300 */
+  color: #0086bc;
 }
 
 .icon-bg-light {
@@ -437,19 +442,19 @@ footer a:hover {
 }
 
 .icon-bg-primary {
-   background-color: #3B82F6; /* bg-blue-600 - Matching hover state */
+   background-color: var(--primary); /* bg-blue-600 - Matching hover state */
 }
 
 .icon-primary {
-  color: #3B82F6; /* text-blue-600 */
+  color: var(--primary); /* text-blue-600 */
   transition: color 0.3s ease-in-out; /* transition-colors duration-300 */
 }
 
 .feature-card:hover .icon-bg-light {
-  background-color: #3B82F6; /* group-hover:bg-blue-600 */
+  background-color: var(--primary); /* group-hover:bg-blue-600 */
 }
 .feature-card:hover .icon-bg-primary {
-  background-color: #2563EB; /* Darker blue on hover for primary */
+  background-color: var(--primary-dark); /* Darker blue on hover for primary */
 }
 
 
