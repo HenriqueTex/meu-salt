@@ -486,3 +486,18 @@ footer a:hover {
 .feature-icon-wrapper .fa-lg {
     font-size: 1.3em; /* Adjusted size */
 }
+
+
+
+.rotate-card {
+	transform: rotate(3deg);
+	transition: transform 0.3s ease;
+}
+
+.rotate-card:hover {
+	transform: rotate(0deg);
+}
+
+.custom-shadow {
+	box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
