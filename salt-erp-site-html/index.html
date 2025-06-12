@@ -52,7 +52,7 @@
 				<div class="collapse navbar-collapse " id="navbarNav">
 					<ul class="navbar-nav ms-auto ">
 						<li class="nav-item">
-							<a class="nav-link active" href="#hero">Home</a>
+							<a class="nav-link active" href="#hero">Início</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#diferenciais">Diferenciais</a>
@@ -78,7 +78,7 @@
 						</li>
 
 						<li class="nav-item">
-							<a class="nav-link" href="#contato">Contato</a>
+							<a class="nav-link" href="#demonstracao">Contato</a>
 						</li>
 					</ul>
 					<a href="#demonstracao" class="btn btn-primary ms-3 d-none d-lg-block">Solicite uma Demonstração</a>
@@ -528,7 +528,7 @@
 				<div class="col-lg-2">
 					<h5 class="mb-3">Links Rápidos</h5>
 					<ul class="list-unstyled">
-						<li class="mb-2"><a href="#hero" class="text-white text-decoration-none">Home</a></li>
+						<li class="mb-2"><a href="#hero" class="text-white text-decoration-none">Início</a></li>
 						<li class="mb-2"><a href="#diferenciais" class="text-white text-decoration-none">Diferenciais</a></li>
 						<li class="mb-2"><a href="#funcionalidades-completas"
 								class="text-white text-decoration-none">Funcionalidades</a></li>
@@ -584,6 +584,37 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 	<!-- JavaScript personalizado -->
 	<script src="js/scripts.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			const sections = document.querySelectorAll('section[id]');
+			const navLinks = document.querySelectorAll('.navbar-nav a.nav-link, .dropdown-menu a.dropdown-item');
+
+			const observer = new IntersectionObserver(
+				(entries) => {
+					entries.forEach(entry => {
+						if (entry.isIntersecting) {
+							const id = entry.target.getAttribute('id');
+
+							navLinks.forEach(link => {
+								link.classList.remove('active');
+								const href = link.getAttribute('href').replace('#', '');
+								if (href === id) {
+									link.classList.add('active');
+								}
+							});
+						}
+					});
+				},
+				{
+					root: null,
+					rootMargin: '0px',
+					threshold: 0.6, // dispara quando 60% da seção está visível
+				}
+			);
+
+			sections.forEach(section => observer.observe(section));
+		});
+	</script>
 </body>
 
 </html>
